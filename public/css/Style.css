@@ -1,0 +1,191 @@
+.ButtonReset{
+  position: absolute;
+  margin-top:26px;
+  right:10%;
+  top: 51px;
+
+ 
+}
+.ButtonSend{
+  margin-top: 5px;
+  position: absolute;
+  right: 3%;
+  top: 111px;
+  margin-bottom: 5px;
+  border: none;
+  
+}
+.Button {
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 9px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.Send{
+    background-color: white;
+    color: black;
+    border: 2px solid; 
+    animation-name: AnimacionBtn;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.Reset{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555; 
+
+    animation-name: AnimacionBtn;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+ 
+.Task{
+    resize: none;
+    margin-top:20px;
+    margin-right: 0px;
+    border-right: 0px;
+    border-radius: 
+    border-bottom: 2px solid rgb( 175, 196, 247 );
+    border: none;
+    border-radius: 4px;
+    border-radius: 15px 50px 30px 5px;
+    padding: 10px 20px;
+    box-sizing:border-box;
+    max-width: 400px;
+    max-height: 100px;
+
+    animation-name: AnimacionT;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+.Taskimp{
+    background-color: rgb( 255, 255, 255 );
+    resize: none;
+    margin-top:20px;
+    margin-right: 0px;
+    border-right: 0px;
+    border-radius: 
+    border-bottom: 2px solid rgb( 175, 196, 247 );
+    border: none;
+    border-radius: 4px;
+    border-radius: 15px 50px 30px 5px;
+    padding: 10px 20px;
+    box-sizing:border-box;
+    width: 350px;
+    height: 100px;
+
+    animation-name: AnimacionTimp;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+.NT{
+     padding: 10px 20px;
+    border: none;
+    border-bottom: 2px solid rgb( 175, 196, 247 );
+    border-radius: 4px;
+    border-radius: 15px 50px 30px 5px;
+
+}
+
+.NTimp{
+    background-color: rgb( 255, 255, 255 );
+    padding: 5px 5px;
+    border: none;
+    border-bottom: 2px solid rgb( 175, 196, 247 );
+    border-radius: 4px;
+    border-radius: 15px 50px 30px 5px;
+    animation-name: AnimacionNT;
+    animation-duration: 3s;
+    animation-iteration-count: 1;   
+}
+
+.Tarjetas{
+z-index: 1;
+padding: 10px;	
+position: relative;
+margin: auto;
+border-style: dashed;
+border-width: 5px;
+border-radius: 10Px;
+border-color: #000000;
+  height: 200px;
+  width: 40%;
+background:   #c8c8c8  ;
+animation-name: AnimacionTarget;
+animation-duration: 3s;
+animation-iteration-count: 1;
+}
+
+ .Sesiones{
+   position: fixed;
+   right: 10%;
+}
+
+@keyframes AnimacionTarget {
+    1% {background-color:  #ffffff ; height: 100px;}
+    10% {background-color: #ffffff;}
+    20% {background-color: #ffffff; }
+    30% {background-color: #ffffff; }
+    40% {background-color: #ffffff; }
+    50% {background-color: #ffffff; }
+    60% {background-color: #ffffff; height: 200px}
+}
+
+
+@keyframes AnimacionT {
+    1%  {height: 3px;}
+    10% {height: 3px;}
+    60% {height: 3px;}
+    65% {height: 80px;}
+    70% {height: 120px;}
+    80% {height: 130px;}
+    90% {height: 140px;}
+}
+
+@keyframes AnimacionTimp {
+    1% {background-color: rgb( 227, 255, 224 ); height: 3px;}
+    10% {background-color: rgb( 227, 255, 224 ); height: 3px;}
+    20% {background-color: rgb( 227, 255, 224 ); }
+    30% {background-color: rgb( 227, 255, 224 ); }
+    40% {background-color: rgb( 227, 255, 224 ); }
+    50% {background-color: rgb( 227, 255, 224 ); }
+    60% {background-color: rgb( 205, 255, 200 ); height: 100px;}
+    70% {height: 120px;}
+   
+}
+
+@keyframes AnimacionBtn {
+    1% {background-color:  #feffff ; height: 1px; width: 11px; border-color:#feffff;  font-size: 0;}
+    10% {background-color: #feffff ; border-color:#feffff;}
+    60% {background-color: #feffff ; height: 1px; width: 1px; font-size: 0; border-color:#feffff;}
+    65% {background-color: #feffff ; border-color:#feffff;}
+    70% {background-color: #feffff ; font-size:0;}
+    80% {background-color: #feffff ; border-color:#feffff;}
+    90% {background-color: #feffff ; border-color:#feffff;}
+}
+
+
+html {
+ height:100%;
+}
+
+body {
+padding: 20px;	
+margin: 0;
+background: #fff;
+
+
+}
+background: #bdc3c7;  
+background: -webkit-linear-gradient(to left, #2c3e50, #bdc3c7);  
+background: linear-gradient(to left, #2c3e50, #bdc3c7); 
