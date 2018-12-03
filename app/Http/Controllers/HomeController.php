@@ -6,7 +6,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Routing\Redirector;
 use App\Lista;
+
 
 class HomeController extends Controller
 {
@@ -48,10 +50,15 @@ class HomeController extends Controller
         echo $Task->Nombre;
         */
 
-        return view('Home2',compact('Task'));
+        //return view('Nhome',compact('Task'));
+         
 
-      
+         //return redirect()->back()->with(compact('Task'));
 
+        
+         return redirect('home')->with('Task',compact('Task'));
+
+       
     }
 
     // eliminar 
@@ -61,16 +68,18 @@ class HomeController extends Controller
 
         $D= $Request->input('ID');
 
-        // echo $Var->id;
-
+       
         DB::table('listas')
             ->where('id',$D)
             ->delete();
 
-        $Task = DB::table('listas')->get();
+            
+            $Var = new Lista();
+            $Task=Lista::all();
 
-            return view('Home2',compact('Task'));
+            return view('Nhome',compact('Task'));
     }
+
 
     // editar
 

@@ -18,7 +18,7 @@ Rutas Básicas
 // Ruta normal
 Route::get('!!!',function(){
 	return 'Prueba de ruta';
-	//http://127.0.0.1:8000/!!!
+	http://127.0.0.1:8000/!!!
 });
 
 // ruta con parámetros
@@ -70,12 +70,19 @@ Route::get('/', function () {
      return view('welcome');
 });
 
+Route::get('/home/Task/{Task}',function($Task){
+	return view('Home2',$Task);
+});
+
 Route::get('/exit','HomeController@Salir');
 
 
 Route::post('/save', 'HomeController@Guardar');
 
 Route::post('/delete','HomeController@Borrar');
+
+
+
 
 Auth::routes();
 

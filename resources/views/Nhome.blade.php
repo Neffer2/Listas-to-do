@@ -23,33 +23,38 @@
        </div>
     </div>
 
+  
 
 
-   @if (session('status'))
+  
+   @if (session('Task'))
 
-   {{ "Aqui estoy" }}
+   @foreach ( session('Task') as $Datos)
 
-    @foreach ($Task as $Datos)
-
-
+    
     <div class="Tarjetas" style="margin-top: 20px;">
-      <form action="" method="">
+      <form action="/delete" method="POST">
         @csrf
         <div align="center">
-          <input class="NT" type="text" name="Ntarea" placeholder="Nombre nueva tarea." autocomplete="off" required="" value="{{ $Datos->Nombre}}"> 
+          <input class="NT" type="text" name="Ntarea" placeholder="Nombre nueva tarea." autocomplete="off" required="" value="{{ $Datos->Nombre}}" readonly=""> 
        </div>
+         <input type="text" name="ID" value="{{ $Datos->id}}" style="visibility: hidden;position: absolute;" readonly>
        <div>
-           <textarea class="Task" name="Task" rows="10" cols="30" placeholder="Tu tarea." required>{{ $Datos->Tarea}}</textarea>
+           <textarea readonly class="Task" name="Task" rows="10" cols="30" placeholder="Tu tarea." required>{{ $Datos->Tarea}}</textarea>
        </div> 
            <div class="ButtonSend">
-            <button type="submit" value="Guardar" name="Button" class="Button Send">Guardar</button>
-             </div>
-             </form>
+            <button type="submit" value="Eliminar" name="Button" class="Button Send">Eliminar</button>
+             </div>    
+        </form>
        </div>
-    </div>
+    </div> 
+    
     @endforeach
 
-   @endif
+   
+
+
+   @endisset
    
 
 
