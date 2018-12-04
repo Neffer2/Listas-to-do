@@ -13,6 +13,7 @@
   top: 111px;
   margin-bottom: 5px;
   border: none;
+  border-color: #A4A4A4;
   
 }
 .Button {
@@ -31,7 +32,7 @@
 .Send{
     background-color: white;
     color: black;
-    border: 2px solid; 
+    border: 2px solid #A4A4A4; 
     animation-name: AnimacionBtn;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -40,12 +41,13 @@
 .Reset{
     background-color: white;
     color: black;
-    border: 2px solid #555555; 
+    border: 2px solid #A4A4A4; 
 
     animation-name: AnimacionBtn;
     animation-duration: 3s;
     animation-iteration-count: 1;
 }
+
 
  
 .Task{
@@ -114,10 +116,10 @@ z-index: 1;
 padding: 10px;	
 position: relative;
 margin: auto;
-border-style: dashed;
+border-style: solid;
 border-width: 5px;
 border-radius: 10Px;
-border-color: #000000;
+border-color: #c8c8c8;
   height: 200px;
   width: 40%;
 background:   #c8c8c8  ;

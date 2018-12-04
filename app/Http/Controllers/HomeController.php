@@ -84,9 +84,9 @@ class HomeController extends Controller
 
         DB::table('listas')
             ->where('id',$D)
-            ->update(['Nombre' => $Nt],['Tarea' => $T]);
+            ->update(['Nombre' => $Nt,'Tarea' => $T]);
 
-        //return redirect ('home');     
+        return redirect ('home');     
 
 
     }

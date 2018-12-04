@@ -9,23 +9,32 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
 	 
 
 
 </head>
 
 
-  <nav class="navbar fixed-top navbar-light" style="background-color:  #fcfcfc; padding: 10px;">
-     <a class="navbar-brand" href="/home" style="font-style: italic;">Tus tareas</a>  
-     <a class="navbar-brand" href="/exit">Salir</a> 
-    </nav>
+   <div align="center" style="">
+      <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="/home">Home</a></li>
+      <li role="presentation"><a href="/home">T&uacute;s tareas</a></li>
+      <li role="presentation"><a href="/exit">Salir</a></li>
+    </ul>
+  </div>
   <br>
   <br>
-
+ 
 
 	@section ('Contenido')
 
 	@show
 
+  
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </body>
-    </html>
+
+
+</html>
