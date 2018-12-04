@@ -79,6 +79,8 @@ Route::get('/exit','HomeController@Salir');
 
 Route::post('/save', 'HomeController@Guardar');
 
+Route::post('/edit', 'HomeController@editar');
+
 Route::post('/delete','HomeController@Borrar');
 
 

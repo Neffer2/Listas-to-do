@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2018 a las 04:58:28
+-- Tiempo de generación: 04-12-2018 a las 05:34:50
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.11
 
@@ -33,7 +33,8 @@ CREATE TABLE `listas` (
   `Nombre` varchar(100) NOT NULL,
   `Tarea` varchar(200) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `Correo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -104,7 +105,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Neffer', 'Hola@hola.com', NULL, '$2y$10$lTGRNSVXuydHMVjDd6UifeGkrUc7zaxnCdkSgo8TKVeJdDuDjhbjC', '9k1WBXdAziQo2oEpAGnZjiAnNJLk4fdPrjh6UuWyF8IjH7F2WreRZbUsydga', '2018-11-20 21:13:14', '2018-11-20 21:13:14');
+(1, 'Neffer', 'Hola@hola.com', NULL, '$2y$10$lTGRNSVXuydHMVjDd6UifeGkrUc7zaxnCdkSgo8TKVeJdDuDjhbjC', 'AYf9XKraQInHbACJV0dEnGlJF5aIkPNtZrom7DNcJvj8u9EcAOuIXgNIQ2pN', '2018-11-20 21:13:14', '2018-11-20 21:13:14'),
+(2, 'Neffer', 'Neffer@gmail.com', NULL, '$2y$10$n8yEX58ADwh1oBnUmgsQieaEcRVRGbngRJrROCW.BYkdXfYnOq3K6', 'ih2iGNMuPRG6xeNq50KxOObk8kJR6LQoRgiK9CZzPVLV06Yh2CfvsqZE5LBT', '2018-12-01 19:54:59', '2018-12-01 19:54:59');
 
 --
 -- Índices para tablas volcadas
@@ -149,7 +151,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `listas`
 --
 ALTER TABLE `listas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -167,7 +169,7 @@ ALTER TABLE `mpruebas`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

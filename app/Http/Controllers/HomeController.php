@@ -28,7 +28,11 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view('Nhome');
+
+        $Task = Lista::all()->where('Correo',auth::user()->email);
+
+        return view('Nhome',compact('Task'));
+         
     }
 
 
@@ -41,22 +45,10 @@ class HomeController extends Controller
 
         $Var->Nombre = $Request->input('Ntarea','Tarea sin nombre');
         $Var->Tarea = $Request->input('Task');
+        $Var->Correo = auth::user()->email;
         $Var->save();
         
-        $Task = Lista::all();
-
-        /*$Task = DB::table('listas')->where('Nombre', 'Hola')->first();
-
-        echo $Task->Nombre;
-        */
-
-        //return view('Nhome',compact('Task'));
-         
-
-         //return redirect()->back()->with(compact('Task'));
-
-        
-         return redirect('home')->with('Task',compact('Task'));
+         return redirect('home');
 
        
     }
@@ -75,9 +67,8 @@ class HomeController extends Controller
 
             
             $Var = new Lista();
-            $Task=Lista::all();
 
-            return view('Nhome',compact('Task'));
+            return redirect('home');
     }
 
 
@@ -85,15 +76,18 @@ class HomeController extends Controller
 
     public function editar(Request $Request){
 
-        $Var = new Lista();
+      
+        $D= $Request->input('id');
+        $Nt=$Request->input('Ntarea','Tarea sin nombre');
+        $T= $Request->input('Task');
 
-        $D= $Request->input('ID');
-
-        // echo $Var->id;
 
         DB::table('listas')
             ->where('id',$D)
-            ->update(['Nombre' => 'Me editaron']);
+            ->update(['Nombre' => $Nt],['Tarea' => $T]);
+
+        //return redirect ('home');     
+
 
     }
 
